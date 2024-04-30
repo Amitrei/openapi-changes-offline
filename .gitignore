@@ -1,0 +1,5 @@
+html-report/ui/node_modules/*
+html-report/ui/node_modules/
+html-report/ui/package-lock.json
+html-report/ui/build/static/*.txt
+html-report/ui/build/static/*.html

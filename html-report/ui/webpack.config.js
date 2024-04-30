@@ -13,7 +13,7 @@ module.exports = {
         bundle: './src/index.tsx'
     },
     output: {
-        publicPath: "/resources",
+        publicPath: "/resources/",
         path: path.resolve('build', 'static'),
         filename: '[name].js',
     },
@@ -58,6 +58,7 @@ module.exports = {
             maxChunks: 1,
         }),
         new MonacoWebpackPlugin({
+            publicPath: "/resources",
             languages: ["yaml", "json"]
         }),
         new HtmlWebpackPlugin({
