@@ -1,4 +1,4 @@
-module github.com/pb33f/openapi-changes
+module github.com/pb33f/openapi-changes-offline
 
 go 1.21
 
