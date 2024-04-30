@@ -13,7 +13,7 @@ module.exports = {
         bundle: './src/index.tsx'
     },
     output: {
-        publicPath: "",
+        publicPath: "/resources",
         path: path.resolve('build', 'static'),
         filename: '[name].js',
     },
