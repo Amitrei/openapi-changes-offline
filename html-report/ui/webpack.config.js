@@ -1,8 +1,9 @@
 const prod = process.env.NODE_ENV === 'production';
-
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const webpack = require("webpack");
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const path = require("path");
 
@@ -12,6 +13,7 @@ module.exports = {
         bundle: './src/index.tsx'
     },
     output: {
+        publicPath: "",
         path: path.resolve('build', 'static'),
         filename: '[name].js',
     },
@@ -52,9 +54,17 @@ module.exports = {
         minimize: true,
     },
     plugins: [
+        new webpack.optimize.LimitChunkCountPlugin({
+            maxChunks: 1,
+        }),
+        new MonacoWebpackPlugin({
+            languages: ["yaml", "json"]
+        }),
         new HtmlWebpackPlugin({
             template: 'index.html',
         }),
         new MiniCssExtractPlugin(),
     ],
-};
+
+
+};;

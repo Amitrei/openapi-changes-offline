@@ -8,7 +8,7 @@
     "css-minimizer-webpack-plugin": "^5.0.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.2",
-    "monaco-editor-webpack-plugin": "^7.0.1",
+    "monaco-editor-webpack-plugin": "^7.1.0",
     "terser-webpack-plugin": "^5.3.6",
     "ts-loader": "^9.4.2",
     "tsconfig-paths-webpack-plugin": "^4.0.0",
